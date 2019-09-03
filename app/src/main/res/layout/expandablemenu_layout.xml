@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/expandableMenu_layout_height"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/transparent">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:clickable="false"
+        android:elevation="0dp"
+        android:focusable="false"
+        android:src="@drawable/shape_test"
+        android:scaleType="fitEnd"
+        app:layout_constrainedHeight="true"
+        app:borderWidth="0dp"
+        app:elevation="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/guideline2"
+        app:layout_constraintEnd_toStartOf="@id/guideline2"
+        app:layout_constraintTop_toTopOf="@id/guideline2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <View
+        android:id="@+id/expandableMenu_background"
+        android:layout_width="0dp"
+        app:layout_constrainedWidth="true"
+        android:background="@color/colorPrimaryDark"
+        android:layout_height="0dp"
+        app:elevation="8dp"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="@id/expandableMenu_fab"
+        app:layout_constraintBottom_toBottomOf="@id/expandableMenu_fab"/>
+
+    <pl.sbandurski.expandablemenu.expandablemenu.ExpandableMenuButtonContainer
+        android:id="@+id/expandableMenu_button_container"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/expandableMenu_button_layout_height"
+        android:layout_gravity="center"
+        android:gravity="center"
+        app:elevation="8dp"
+        android:clipChildren="false"
+        android:orientation="horizontal"
+        android:paddingEnd="@dimen/expandableMenu_button_padding"
+        app:layout_constraintEnd_toStartOf="@id/expandableMenu_fab"
+        app:layout_constraintTop_toTopOf="@id/expandableMenu_fab"
+        app:layout_constraintBottom_toBottomOf="@id/expandableMenu_fab"/>
+
+    <View
+        android:id="@+id/guideline"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.0"
+        app:layout_constraintStart_toStartOf="@id/expandableMenu_fab"
+        app:layout_constraintEnd_toEndOf="@id/expandableMenu_fab"
+        app:layout_constraintTop_toTopOf="@id/expandableMenu_fab"
+        app:layout_constraintBottom_toBottomOf="@id/expandableMenu_fab"/>
+
+    <View
+        android:id="@+id/guideline2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintStart_toStartOf="@id/expandableMenu_background"
+        app:layout_constraintTop_toTopOf="@id/expandableMenu_fab"
+        app:layout_constraintBottom_toBottomOf="@id/expandableMenu_fab"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/expandableMenu_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:borderWidth="0dp"
+        app:elevation="8dp"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
